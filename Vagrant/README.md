@@ -53,4 +53,16 @@ This follows basic vagrant workflow, e.g.
 * ```ls shared``` provides access to the build-folder within the virtual build machine
 * ```vagrant ssh``` ssh into the virtual build machine
 
+# Standalone provisioning
+
+With only ```ansible``` installed, it is possible to configure a **Ubuntu 16.04** remote server to compile and run the alqo.
+
+Do not forget to change **server_ip** and username. Expects to connect to your remote VPS via SSH and password-auth.
+Consult manpage of ```ansible-playbook``` for other options.
+
+```shell
+ansible-playbook provision.yml -i "sever_ip," --extra-vars '{"shared_folder_remote":"/opt/shared"}' -u sudouser -k
+```
+
+*shared_folder_remote* will be the target for alqo git repo and compile action.
 
