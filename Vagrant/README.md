@@ -61,7 +61,7 @@ Do not forget to change **server_ip** and username. Expects to connect to your r
 Consult manpage of ```ansible-playbook``` for other options.
 
 ```shell
-ansible-playbook provision.yml -i "sever_ip," --extra-vars '{"shared_folder_remote":"/opt/shared"}' -u sudouser -k
+ansible-playbook provision.yml -i "sever_ip," --extra-vars '{"shared_folder_remote":"/opt/alqo"}' -u sudouser -k
 ```
 
 *shared_folder_remote* will be the target for alqo git repo and compile action.
