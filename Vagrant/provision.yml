@@ -20,6 +20,7 @@
       - build-essential
       - libtool
       - autotools-dev
+      - automake
       - autoconf
       - pkg-config
       - libssl-dev
